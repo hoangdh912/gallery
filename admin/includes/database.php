@@ -27,7 +27,7 @@ class Database {
 	//Helper Method
 	private function confirm_query($result){
 		if(!$result){
-			die("Query Failed" . $this->connection->error);
+			die("Query Failed: " . $this->connection->error);
 		}
 	}
 
