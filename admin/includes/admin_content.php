@@ -10,14 +10,12 @@
 
                         <?php 
 
-                        $user = new User();
+                        // $user = new User();
 
-                        $user->username = "Exsusename";
-                        $user->password = "as_password";
-                        $user->first_name = "Easle_first_name";
-                        $user->last_name = "asvple_last_name";
-
-                        $user->create();
+                        // $user->username = "Exasfvaename";
+                        // $user->password = "as_paasfgssword";
+                        
+                        // $user->save();
 
                         // $user = User::find_single_user(8);
                         // $user->last_name = "Williams";
@@ -26,8 +24,10 @@
 
                         // $user->update();
 
-                        // $user = User::find_single_user(10);
-                        // $user->delete();
+                        // $users = User::find_all();
+                        // foreach ($users as $user) {
+                        //     echo $user->username;
+                        // }
 
                         // $user = User::find_single_user(10);
                         // $user->password = "justpassword";
@@ -36,6 +36,20 @@
                         // $user = new User();
                         // $user->username = "Wow";
                         // $user->save();
+
+                        // $photos = Photo::find_all();
+                        // foreach ($photos as $photo) {
+                        //     echo $photo->title;
+                        // }
+
+                        // $photo = new Photo();
+
+                        // $photo->title = "Extra Image";
+                        // $photo->size = 45;
+                        
+                        // $photo->save();
+
+                        echo INCLUDES_PATH;
 
                         ?>
 
