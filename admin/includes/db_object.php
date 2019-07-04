@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Db_object {
 
@@ -13,7 +13,7 @@ class Db_object {
 	}
 
 	public static function find_by_query($sql){
-		global $database; 
+		global $database;
 		$result_set = $database->query($sql);
 		$the_object_array = array();
 		while($row = mysqli_fetch_array($result_set)){
@@ -46,7 +46,7 @@ class Db_object {
 		foreach (static::$db_table_fields as $db_field) {
 			if(property_exists($this, $db_field)){
 				$properties[$db_field] = $this->$db_field;
-			} 
+			}
 		}
 		return $properties;
 	}
@@ -59,7 +59,7 @@ class Db_object {
 		}
 		return $clean_properties;
 	}
-	
+
 	public function save(){
 		return isset($this->id) ? $this->update() : $this->create();
 
@@ -70,18 +70,18 @@ class Db_object {
 		global $database;
 		$properties = $this->clean_properties();
 
-		$sql = "INSERT INTO " . static::$db_table . "(" . implode(",", array_keys($properties)) . ") " . 
+		$sql = "INSERT INTO " . static::$db_table . "(" . implode(",", array_keys($properties)) . ") " .
 		    "VALUES ('". implode("','", array_values($properties)) . "')";
 
 		if($database->query($sql)){
 			$this->id = $database->the_insert_id();
-			return true; 
+			return true;
 		} else {
 			return false;
 		}
-		
+
 	}  //Create Method
-    
+
     public function update(){
     	global $database;
     	$properties = $this->clean_properties();
@@ -92,21 +92,20 @@ class Db_object {
 
     	}
 
-    	$sql = "UPDATE " . static::$db_table . " 
+    	$sql = "UPDATE " . static::$db_table . "
     	        SET " . implode(",", $properties_pairs) . " WHERE id = " . $database->escape_string($this->id);
-    	
+
     	$database->query($sql);
 
-    	return (mysqli_affected_rows($database->connection) == 1) ? true : false;  
+    	return (mysqli_affected_rows($database->connection) == 1) ? true : false;
     }  //Update Method
 
     public function delete(){
     	global $database;
     	$sql = "DELETE FROM " . static::$db_table . " WHERE id = " . $database->escape_string($this->id);
-    	
+
     	$database->query($sql);
 
-    return (mysqli_affected_rows($database->connection) == 1) ? true : false;  
+    return (mysqli_affected_rows($database->connection) == 1) ? true : false;
     }
 }
-
