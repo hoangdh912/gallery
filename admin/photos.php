@@ -50,7 +50,7 @@
                             <tbody>
                               <?php foreach ($photos as $photo) : ?>
                                 <tr>
-                                  <td><img src="<?php echo $photo->picture_path(); ?>" alt="" class="img-fluid img-thumbnail">
+                                  <td><img src="<?php echo $photo->picture_path(); ?>" alt="" class="admin-photo-thumbnail">
                                     <div class="pictures_link ">
 
                                       <a href="delete_photo.php?id=<?php echo $photo->id; ?>">Delete</a>
