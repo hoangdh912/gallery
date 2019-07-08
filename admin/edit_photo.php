@@ -14,9 +14,7 @@ if(empty($_GET['id'])){
       $photo->title = $_POST['title'];
       $photo->caption = $_POST['caption'];
       $photo->alternate_text = $_POST['alternate_text'];
-      $photo->description = $_POST['description']; Add caption and alternate_text to PHPmyAdmin
-
-
+      $photo->description = $_POST['description'];
     }
   }
 }
@@ -73,7 +71,7 @@ if(empty($_GET['id'])){
 
                             <div class="form-group">
                               <label for="caption">Description</label>
-                              <textarea class= "form-control" name="description" rows="10" cols="30" ><?php echo $photo->description; ?>"</textarea>
+                              <textarea class= "form-control" name="description" rows="10" cols="30" ><?php echo $photo->description; ?></textarea>
 
                             </div>
                           </div>
