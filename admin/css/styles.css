@@ -49,7 +49,12 @@ padding: 10px;
 
 /*Photo Thumbnail*/
 
-.admin-photo-thumbnail {
+.admin-photo-thumbnail{
 	width: 200px;
 	border-radius: 5px;
+}
+
+.user-image{
+	width: 62px;
+	height: 62px;
 }

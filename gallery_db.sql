@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2019 at 11:41 AM
+-- Generation Time: Jul 09, 2019 at 04:14 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -31,10 +31,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `photos` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
-  `caption` varchar(11) NOT NULL,
+  `caption` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `filename` varchar(255) NOT NULL,
-  `alternate_text` varchar(11) NOT NULL,
+  `alternate_text` varchar(255) NOT NULL,
   `type` varchar(255) NOT NULL,
   `size` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -44,7 +44,7 @@ CREATE TABLE `photos` (
 --
 
 INSERT INTO `photos` (`id`, `title`, `caption`, `description`, `filename`, `alternate_text`, `type`, `size`) VALUES
-(4, 'Car 1', '', '', '_large_image_1.jpg', '', 'image/jpeg', 479843);
+(4, 'Car 1', 'This is jus', 'A super fast car ', '_large_image_1.jpg', 'Lambo', 'image/jpeg', 479843);
 
 -- --------------------------------------------------------
 
@@ -57,24 +57,25 @@ CREATE TABLE `users` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) NOT NULL
+  `last_name` varchar(255) NOT NULL,
+  `user_image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`) VALUES
-(1, 'Will', 'Example_password', 'Smith', 'Williams'),
-(2, 'Will', 'Example_password', 'Smith', 'Williams'),
-(8, 'Eli', 'Example_password', 'Smith', 'Williams'),
-(9, 'Will', 'Example_password', 'Smith', 'Williams'),
-(11, 'Will', 'Example_password', 'Smith', 'Williams'),
-(12, 'Will', 'Example_password', 'Smith', 'Williams'),
-(13, 'Exsusename', 'as_password', 'Easle_first_name', 'asvple_last_name'),
-(14, 'Exsusename', 'as_password', 'Easle_first_name', 'asvple_last_name'),
-(15, 'Exasfvaename', 'as_paasfgssword', '', ''),
-(16, 'Exasfvaename', 'as_paasfgssword', '', '');
+INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`, `user_image`) VALUES
+(1, 'Will', 'Example_password', 'Smith', 'Williams', '2UUSJ.jpg'),
+(2, 'Will', 'Example_password', 'Smith', 'Williams', ''),
+(8, 'Eli', 'Example_password', 'Smith', 'Williams', ''),
+(9, 'Will', 'Example_password', 'Smith', 'Williams', ''),
+(11, 'Will', 'Example_password', 'Smith', 'Williams', ''),
+(12, 'Will', 'Example_password', 'Smith', 'Williams', ''),
+(13, 'Exsusename', 'as_password', 'Easle_first_name', 'asvple_last_name', ''),
+(14, 'Exsusename', 'as_password', 'Easle_first_name', 'asvple_last_name', ''),
+(15, 'Exasfvaename', 'as_paasfgssword', '', '', ''),
+(16, 'Exasfvaename', 'as_paasfgssword', '', '', '');
 
 --
 -- Indexes for dumped tables
