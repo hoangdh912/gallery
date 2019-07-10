@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2019 at 04:14 PM
+-- Generation Time: Jul 10, 2019 at 05:24 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -66,7 +66,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`, `user_image`) VALUES
-(1, 'Will', 'Example_password', 'Smith', 'Williams', '2UUSJ.jpg'),
+(1, 'Will', '', 'Smitha', 'Williamsa', '2-Nadeko Sengoku-1.jpg'),
 (2, 'Will', 'Example_password', 'Smith', 'Williams', ''),
 (8, 'Eli', 'Example_password', 'Smith', 'Williams', ''),
 (9, 'Will', 'Example_password', 'Smith', 'Williams', ''),
@@ -75,7 +75,8 @@ INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`, `u
 (13, 'Exsusename', 'as_password', 'Easle_first_name', 'asvple_last_name', ''),
 (14, 'Exsusename', 'as_password', 'Easle_first_name', 'asvple_last_name', ''),
 (15, 'Exasfvaename', 'as_paasfgssword', '', '', ''),
-(16, 'Exasfvaename', 'as_paasfgssword', '', '', '');
+(16, 'Exasfvaename', 'as_paasfgssword', '', '', ''),
+(18, 'qweq', '1234', 'fs', 'gsh', 'images-9.jpg');
 
 --
 -- Indexes for dumped tables
@@ -107,7 +108,7 @@ ALTER TABLE `photos`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
