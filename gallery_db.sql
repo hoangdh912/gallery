@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2019 at 04:43 PM
+-- Generation Time: Jul 12, 2019 at 05:16 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -34,6 +34,13 @@ CREATE TABLE `comments` (
   `author` varchar(255) NOT NULL,
   `body` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `photo_id`, `author`, `body`) VALUES
+(1, 4, 'Me', 'This is a test');
 
 -- --------------------------------------------------------
 
@@ -120,7 +127,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `photos`

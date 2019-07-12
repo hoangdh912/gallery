@@ -35,5 +35,5 @@ class Comment extends Db_object {
    		return self::find_by_query($sql);		
    	}
 
-}	// End of the Class User
+}	// End of the Class 
 
