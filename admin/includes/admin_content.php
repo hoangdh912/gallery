@@ -5,7 +5,7 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             Admin
-                            <small>Subheading</small>
+                            <small>Dashboard</small>
                         </h1>
 
             <div class="row">
@@ -64,7 +64,7 @@
                                         <i class="fa fa-user fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">8
+                                        <div class="huge"><?php echo User::count_all(); ?>
 
                                         </div>
 
@@ -90,7 +90,7 @@
                                         <i class="fa fa-support fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">8</div>
+                                        <div class="huge"><?php echo Comment::count_all(); ?></div>
                                         <div>Comments</div>
                                     </div>
                                 </div>
