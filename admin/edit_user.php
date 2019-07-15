@@ -1,4 +1,5 @@
 <?php include("includes/header.php"); ?>
+<?php include("includes/photo_library_modal.php"); ?>
 
 <?php if(!$session->is_signed_in()){ redirect("login.php");} ?>
 
@@ -30,6 +31,7 @@
   }
 
  ?>
+       
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -59,7 +61,7 @@
                         </h1>
 
                         <div class="col-md-6">
-                          <img class="admin-photo-thumbnail" src="<?php echo $user->image_path_and_placeholder(); ?>">
+                          <a href="#" data-toggle="modal" data-target="#photo-library"><img class="admin-photo-thumbnail img-responsive" src="<?php echo $user->image_path_and_placeholder(); ?>"></a>
                         </div> 
 
                         <form class="" action="" method="post" enctype="multipart/form-data">
